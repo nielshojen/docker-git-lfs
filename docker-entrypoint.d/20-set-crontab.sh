@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [${CRONTAB} ] && [ ${SOURCE} ] && [ ${TARGET} ]; then
+if [ ! -z "${CRONTAB}" ] && [ ! -z "${SOURCE}" ] && [ ! -z "${TARGET}" ]; then
   echo "#!/bin/sh" > $HOME/scheduled_fetch.sh
   echo "git -C ${TARGET} pull" >> $HOME/scheduled_fetch.sh
   echo "git -C ${TARGET} lfs prune" >> $HOME/scheduled_fetch.sh
