@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
 
-RUN apt-get update && apt-get -y install wget git git-lfs
+RUN apt-get update && apt-get -y install wget git git-lfs cron
 #RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
 
 COPY docker-entrypoint.d /docker-entrypoint.d
