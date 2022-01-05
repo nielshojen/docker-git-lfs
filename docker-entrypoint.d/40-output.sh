@@ -1,5 +1,5 @@
 #!/bin/sh
 
-if [ ${CRONTAB} ]; then
+if [ ! -z "${CRONTAB}" ]; then
   tail -f $HOME/running.log
 fi
