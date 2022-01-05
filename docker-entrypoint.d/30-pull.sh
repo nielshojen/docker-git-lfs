@@ -1,6 +1,7 @@
 #!/bin/sh
 
 if [ ! -z "${SOURCE}" ] && [ ! -z "${TARGET}" ]; then
+    mkdir -p ${TARGET}
     if [ "$(ls -A ${TARGET})" ]; then
         git -C ${TARGET} pull
     else
