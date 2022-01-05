@@ -2,7 +2,7 @@
 
 touch $HOME/running.log
 
-if [[ ${SSH_KEY} ]]; then
+if [ ${SSH_KEY} ]; then
   mkdir -p $HOME/.ssh
   echo "${SSH_KEY}" > $HOME/.ssh/id_rsa
   chmod 0600 $HOME/.ssh/id_rsa
